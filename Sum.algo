@@ -1,0 +1,26 @@
+ALGORITHM Sum
+VAR 
+    Set_1 : ARRAY_OF Entiger [N];
+    Set_2 : ARRAY_OF Entiger [M];
+    i , j , sum1 , sum2 , sum : Entiger
+BEGIN
+    write("Please enter the number of Set_1")
+    read(Set_1)
+    write("Please enter the number of Set_2")
+    read(Set_2)
+    sum1<--0
+    FOR i<--0 TO (N-1) STEP 1  DO
+        IF Set_1[i]<>Set_2 THEN
+            sum1<--sum1+Set_1[i]
+        END_IF
+    END_FOR
+    sum2<--0
+    FOR j<--0 TO (M-1) STEP 1  DO
+        IF Set_2[j]<>Set_1 THEN
+            sum2<--sum2+Set_2[j]
+        END_IF
+    END_FOR
+    sum<--sum1+sum2
+    write("the outpute is :" , sum)
+
+END
